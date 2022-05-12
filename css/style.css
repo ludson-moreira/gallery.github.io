@@ -1,0 +1,573 @@
+/*Fonts*/
+@font-face {
+  src: url(../fonts/RobotoMono-Regular-Regular.ttf);
+  font-family: 'RobotoMono-Regular';
+  font-weight: normal;
+}
+
+/*General Configuration*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #490808;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  font-family: RobotoMono-Regular;
+}
+
+/*Menu*/
+.menu {
+  background-color: #333333;
+  border-bottom: 2px solid #ad1212;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  justify-content: center;
+}
+
+.menu li {
+  height: 50px;
+}
+
+.menu li a {
+  display: flex;
+  color: #cccccc;
+  text-align: center;
+  padding: 14px 16px;
+  height: 100%;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #aaaaaa;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.menu-btn ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+  overflow: hidden;
+}
+
+.menu-btn li {
+  list-style: none;
+  padding-right: 10px;
+}
+
+#menu-btn-login {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  padding: 0;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+
+#menu-btn-login a:hover {
+  background-color: #ffffff00;
+}
+
+#menu-btn-logo {
+  position: absolute;
+  display: flex;
+  left: 0;
+  padding: 0;
+  margin-left: 15px;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+}
+
+#menu-btn-logo a:hover {
+  background-color: #ffffff00;
+}
+
+/*Menu Login*/
+#login {
+  display: none;
+}
+
+#menu-btn-login-back {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  position: absolute;
+  display: none;
+  left: 0;
+  padding: 0;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+#menu-btn-login-back a:hover {
+  background-color: #ffffff00;
+}
+
+#menu-btn-login-logo {
+  display: none;
+  justify-content: center;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+}
+
+#menu-btn-login-logo a:hover {
+  background-color: #ffffff00;
+}
+
+/*Login*/
+.login {
+  background-image: url("../img/background-home.jpeg");
+  background-color: #cccccc;
+  height: 92vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.6;
+  display: none;
+}
+
+.login-text {
+  text-align: left;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+.login-text h1 {
+  text-align: center;
+}
+
+#user,
+#password {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+
+#user:hover,
+#user:focus,
+#password:hover,
+#password:focus {
+  border: 3px solid #000000;
+}
+
+#login-reset,
+#login-submit {
+  padding: 0.6rem 2rem;
+  background-color: #ffffff;
+  border: none;
+  color: #000000;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#login-reset:hover,
+#login-submit:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/*Home*/
+.home {
+  background-image: url("../img/background-home.jpeg");
+  background-color: #cccccc;
+  height: 92vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.6;
+}
+
+.home-text {
+  text-align: justify;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+.home-text h1 {
+  text-align: center;
+}
+
+/*Gallery*/
+.gallery {
+  display: flex;
+  align-items: center;
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.gallery-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  padding-top: 50px;
+}
+
+.gallery-card {
+  width: 49%;
+  height: 400px;
+  margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.gallery-card:hover {
+  border: 2px solid #000000;
+  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  background-size: 110%;
+}
+
+.gallery-card-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.gallery-card-btn {
+  padding: 0.6rem 2rem;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.gallery-card-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.gallery #card-1 {
+  background-image: url("../img/animais.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery #card-2 {
+  background-image: url("../img/arquitetura.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery #card-3 {
+  background-image: url("../img/cidade.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery #card-4 {
+  background-image: url("../img/decoracao.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery #card-5 {
+  background-image: url("../img/esportes.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery #card-6 {
+  background-image: url("../img/natureza.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery #card-7 {
+  background-image: url("../img/paisagem.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery #card-8 {
+  background-image: url("../img/pessoas.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery #card-9 {
+  background-image: url("../img/refeicoes.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*About*/
+.about {
+  background-image: url("../img/background-about.jpg");
+  background-color: #cccccc;
+  height: 92vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.6;
+  padding-top: 50px;
+}
+
+.about-text {
+  text-align: justify;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+.about-text h1 {
+  text-align: center;
+}
+
+/*Services*/
+.services {
+  width: 100%;
+  position: relative;
+  padding-top: 50px;
+}
+
+.services-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+}
+
+.services-gallery {
+  display: flex;
+  align-items: center;
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.services-gallery-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  padding-top: 50px;
+}
+
+.services-gallery-card {
+  width: 21%;
+  height: 400px;
+  margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.services-gallery-card-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.services-gallery-card-img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.services-gallery-card-btn {
+  padding: 0.6rem 2rem;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  bottom: 0;
+  justify-items: end;
+  position: relative;
+}
+
+.services-gallery-card-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.services-gallery #services-card-1 {
+  background-color: #490808;
+  box-shadow: 5px 5px 5px 0px #ffffff, inset 4px 4px 15px 0px #ffffff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.services-gallery #services-card-2 {
+  background-color: #490808;
+  box-shadow: 5px 5px 5px 0px #ffffff, inset 4px 4px 15px 0px #ffffff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.services-gallery #services-card-3 {
+  background-color: #490808;
+  box-shadow: 5px 5px 5px 0px #ffffff, inset 4px 4px 15px 0px #ffffff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.services-gallery #services-card-4 {
+  background-color: #490808;
+  box-shadow: 5px 5px 5px 0px #ffffff, inset 4px 4px 15px 0px #ffffff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+/*Contact*/
+.contact {
+  background-image: url("../img/background-contact.jpg");
+  background-color: #490808;
+  height: 92vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.8;
+}
+
+.contact-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  padding-top: 20px;
+}
+
+/*Contact-Form*/
+.contact-form {
+  padding: 20px;
+  width: 30%;
+  display: flex;
+  justify-content: right;
+  margin-left: 60%;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+#contact-submit {
+  padding: 0.6rem 2rem;
+  background-color: #ffffff;
+  border: none;
+  color: #000000;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  width: 40%;
+  margin-left: 30%;
+}
+
+#contact-submit:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.social-media ul {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  width: 50%;
+  list-style: none;
+  top: 50%;
+  position: absolute;
+}
+
+.social-media ul li {
+  margin: 0 1rem;
+}
+
+.social-media ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.social-media ul li i {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.social-media ul li a:hover {
+  color: #000000;
+}
